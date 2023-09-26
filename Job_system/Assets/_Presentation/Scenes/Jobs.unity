@@ -246,12 +246,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d03210d8a6034705a6c39d0093814026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  body: {fileID: 1694388104871626409, guid: 678bf8bc91771fa498236de892b83d1d, type: 3}
+  body: {fileID: 3134907075851463235, guid: 9197b9bf204da4d80b25efeaa3c0aa59, type: 3}
   centerPoint: {fileID: 1645898102}
   count: 100
   speed: 1
-  isJob: 0
-  logCompiler: {fileID: 1357491365}
+  isJob: 1
 --- !u!4 &37865861
 Transform:
   m_ObjectHideFlags: 0
@@ -388,7 +387,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26d476d6614642ebb14d64f0c271534f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeInvoke: 2
 --- !u!4 &1357491366
 Transform:
   m_ObjectHideFlags: 0

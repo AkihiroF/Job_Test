@@ -5,16 +5,10 @@ namespace _Source.MovementObjects
 {
     public class LogCompilerComponent : MonoBehaviour
     {
-        [SerializeField] private float timeInvoke;
+        public const float TimeInvoke = 3f;
         private int _countTransforms;
 
         private LogMatchJob _logMatch;
-
-        public void SetLenghtArray(int count)
-        {
-            _countTransforms = count;
-            Debug.Log(_countTransforms);
-        }
 
         private void Awake()
         {
@@ -23,18 +17,15 @@ namespace _Source.MovementObjects
 
         private void Start()
         {
-            InvokeRepeating("CompileLog", 0,timeInvoke);
+            InvokeRepeating("CompileLog", 0,TimeInvoke);
         }
 
         private void CompileLog()
         {
-            for (int i = 0; i < _countTransforms; i++)
-            {
-                float randomNumber = Random.Range(1f, 100f);
-                _logMatch.Number = randomNumber;
-                JobHandle jobHandle = _logMatch.Schedule();
-                jobHandle.Complete();
-            }
+            float randomNumber = Random.Range(1f, 100f);
+            _logMatch.Number = randomNumber;
+            JobHandle jobHandle = _logMatch.Schedule();
+            jobHandle.Complete();
         }
     }
 }
